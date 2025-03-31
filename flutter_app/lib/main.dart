@@ -49,6 +49,22 @@ class MyApp extends StatelessWidget {
               ),
             ),
 
+            //Image
+             Stack(
+              children: [
+              Positioned(
+                top: 100,
+                left: 150,
+                child: Image.asset(
+             'assets/images/Plant.png', // Make sure the image is added to the assets folder and referenced in pubspec.yaml
+              width: 100, // Adjust the width as needed
+              height: 100, // Adjust the height as needed
+                  )
+                )
+              ]
+             ),
+             
+
             // Second container (Made by)
             Positioned(
               top: 300, // Controls the vertical position
@@ -85,19 +101,14 @@ class MyApp extends StatelessWidget {
                     print('Button Pressed');
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(
-                      255,
-                      0,
-                      92,
-                      18,
-                    ), // Button color
+                    backgroundColor: const Color.fromARGB(255, 1, 141, 24), // Button color
                     padding: const EdgeInsets.symmetric(
                       horizontal: 50,
                       vertical: 15,
                     ), // Button padding
                   ),
                   child: const Text(
-                    'Press Me',
+                    'Create a RootBud',
                     style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
