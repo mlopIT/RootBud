@@ -10,111 +10,150 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 0, 92, 18),
-          title: const Text('RootBud'),
-        ),
-        body: Stack(
-          children: [
-            /// First container (RootBud)
-            Positioned(
-            top: 0, // Ensures it starts at the top
+      home: HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 0, 92, 18),
+        title: const Text('RootBud'),
+      ),
+      body: Stack(
+        children: [
+          /// First container (Red Background)
+          Positioned(
+            top: 0,
             left: 0,
             right: 0,
             child: Container(
-            color: const Color.fromARGB(255, 221, 66, 10),
-            height: 400,
-            child: const Align(
-            alignment: Alignment.topCenter,
-            child: Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-              Text(
-              'RootBud',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'YourFontName',
+              color: const Color.fromARGB(255, 221, 66, 10),
+              height: 400,
+            ),
+          ),
+
+          /// RootBud Text in its own container
+          Positioned(
+            top: 20,
+            left: 50,
+            right: 50,
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              decoration: BoxDecoration(
                 color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 5,
+                    spreadRadius: 2,
+                  ),
+                ],
+              ),
+              child: const Text(
+                'RootBud',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'YourFontName',
+                  color: Colors.black,
+                ),
               ),
             ),
-            SizedBox(height: 10),
-          ],
-        ),
-      ),
-    ),
-  ),
-),
+          ),
 
-
-
-            
-            
-
-            // Image
-            Positioned(
-              top: 100,
-              left: 150,
-              child: Image.asset(
-                'assets/images/Plant.png', // Make sure the image is added to the assets folder and referenced in pubspec.yaml
-                width: 100, // Adjust the width as needed
-                height: 100, // Adjust the height as needed
+          /// Image inside its own container
+          Positioned(
+            top: 50,
+            left: 50,
+            child: Container(
+              width: 300,
+              height: 300,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Image.asset(
+                  'assets/images/Fullplant.png',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
+          ),
 
-            // Second container (Made by)
-            Positioned(
-              top: 300, // Controls the vertical position
-              left: 0,
-              right: 0,
-              child: Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.symmetric(horizontal: 30),
-                color: Colors.black.withOpacity(
-                  0.7,
-                ), // Semi-transparent background
+          /// Second container (Made by)
+          Positioned(
+            top: 300,
+            left: 0,
+            right: 0,
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              margin: const EdgeInsets.symmetric(horizontal: 30),
+              color: Colors.black.withOpacity(0.7),
+              child: const Text(
+                'Made by Tyler Chadwick, Michael Lopez, Chris Sanchez, and Emdya Permuy-Llovio',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+
+          /// Button below the container
+          Positioned(
+            bottom: 150,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  // Navigate to the blank screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const BlankScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 1, 141, 24),
+                  padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                ),
                 child: const Text(
-                  'Made by Tyler Chadwick, Michael Lopez, Chris Sanchez, and Emdya Permuy-Llovio',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 18, // Slightly smaller than "RootBud"
-                    fontWeight: FontWeight.normal,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.white,
-                  ),
+                  'Create a RootBud!',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
-            // Fourth Child - Button below the container
-            Positioned(
-              bottom: 100, // Positioned near the bottom of the screen
-              left: 0,
-              right: 0,
-              child: Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Add functionality when button is pressed
-                    print('Button Pressed');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 1, 141, 24), // Button color
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 50,
-                      vertical: 20,
-                    ), // Button padding
-                  ),
-                  child: const Text(
-                    'Create a RootBud!',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
-                  ),
-                ),
-              ),
-            ),
-          ],
+/// **New Blank Screen**
+class BlankScreen extends StatelessWidget {
+  const BlankScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Create RootBud'),
+        backgroundColor: const Color.fromARGB(255, 0, 92, 18),
+      ),
+      body: const Center(
+        child: Text(
+          'This is a blank screen!',
+          style: TextStyle(fontSize: 24),
         ),
       ),
     );
