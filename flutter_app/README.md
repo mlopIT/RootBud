@@ -2,6 +2,27 @@
 
 A new Flutter project.
 
+Before you begin, ensure that you have atleast one android connected and powered on (running):
+
+Go to far bottom left corner of screen.
+Click "Device" to pull up a list of android devices.
+Click Pixel 3 or whichever Android System you'd prefer to run the app on.
+
+
+TO BEGIN GO TO THE TERMINAL AND RUN THE FOLLOWING COMMANDS:
+
+cd flutter_app
+
+flutter run
+
+Now you wait, for the flutter to load...
+
+When changing the "main.dart" file of the app, 
+press lowercase r inside of the terminal to hot-reload the app (its an easy way to see all of the chnages you've made to the app itself).
+
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
