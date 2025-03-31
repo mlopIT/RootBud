@@ -38,8 +38,8 @@ Tyler Chadwick- UI/UX Design using Figma, creation of the Google documents, and 
  
 Emdya Permuy-Llovio - UI/UX Design using Figma, editing for the 5 min pitch, and the creation of the Impact Assessment Document. Creator of the Demo portion of this project and helped a lot during people’s points of confusion and acted as a great leader during those moments of chaos, and they were the one who submitted most of the necessary documentation and recordings to the Devpost website. She was also the one to originally get the team together when the Hackathon first began.
 
-![FigmaPic1](flutter_app/assets/images/FigmaPic(1).png)
-![FigmaPic2](flutter_app/assets/images/FigmaPic(2).png)
-![FigmaPic3](flutter_app/assets/images/FigmaPic(3).png)
-![FigmaPic4](flutter_app/assets/images/FigmaPic(4).png)
-![FigmaPic5](flutter_app/assets/images/FigmaPic(5).png)
+![FigmaPic1](flutter_app/assets/images/FigmaPic_(1).png)
+![FigmaPic2](flutter_app/assets/images/FigmaPic_(2).png)
+![FigmaPic3](flutter_app/assets/images/FigmaPic_(3).png)
+![FigmaPic4](flutter_app/assets/images/FigmaPic_(4).png)
+![FigmaPic5](flutter_app/assets/images/FigmaPic_(5).png)
