@@ -17,53 +17,53 @@ class MyApp extends StatelessWidget {
         ),
         body: Stack(
           children: [
-            // First container (RootBud)
-            Container(
-              color: const Color.fromARGB(255, 221, 66, 10),
-              height: 400,
-              width: 1000,
-              child: const Align(
-                alignment:
-                    Alignment.topCenter, // Aligns content to the top center
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    top: 20,
-                  ), // Adjust top padding as needed
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min, // Keeps content compact
-                    children: [
-                      // RootBud Text
-                      Text(
-                        'RootBud',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'YourFontName',
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(height: 10), // Space between texts
-                    ],
-                  ),
-                ),
+            /// First container (RootBud)
+            Positioned(
+            top: 0, // Ensures it starts at the top
+            left: 0,
+            right: 0,
+            child: Container(
+            color: const Color.fromARGB(255, 221, 66, 10),
+            height: 400,
+            child: const Align(
+            alignment: Alignment.topCenter,
+            child: Padding(
+            padding: EdgeInsets.only(top: 20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+              Text(
+              'RootBud',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'YourFontName',
+                color: Colors.white,
               ),
             ),
+            SizedBox(height: 10),
+          ],
+        ),
+      ),
+    ),
+  ),
+),
 
-            //Image
-             Stack(
-              children: [
-              Positioned(
-                top: 100,
-                left: 150,
-                child: Image.asset(
-             'assets/images/Plant.png', // Make sure the image is added to the assets folder and referenced in pubspec.yaml
-              width: 100, // Adjust the width as needed
-              height: 100, // Adjust the height as needed
-                  )
-                )
-              ]
-             ),
-             
+
+
+            
+            
+
+            // Image
+            Positioned(
+              top: 100,
+              left: 150,
+              child: Image.asset(
+                'assets/images/Plant.png', // Make sure the image is added to the assets folder and referenced in pubspec.yaml
+                width: 100, // Adjust the width as needed
+                height: 100, // Adjust the height as needed
+              ),
+            ),
 
             // Second container (Made by)
             Positioned(
@@ -91,7 +91,7 @@ class MyApp extends StatelessWidget {
 
             // Fourth Child - Button below the container
             Positioned(
-              bottom: 50, // Positioned near the bottom of the screen
+              bottom: 100, // Positioned near the bottom of the screen
               left: 0,
               right: 0,
               child: Center(
@@ -104,11 +104,11 @@ class MyApp extends StatelessWidget {
                     backgroundColor: const Color.fromARGB(255, 1, 141, 24), // Button color
                     padding: const EdgeInsets.symmetric(
                       horizontal: 50,
-                      vertical: 15,
+                      vertical: 20,
                     ), // Button padding
                   ),
                   child: const Text(
-                    'Create a RootBud',
+                    'Create a RootBud!',
                     style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
