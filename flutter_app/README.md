@@ -5,8 +5,8 @@ A new Flutter project.
 Before you begin, ensure that you have atleast one android connected and powered on (running):
 
 Go to far bottom left corner of screen.
-Click "Device" to pull up a list of android devices.
-Click Pixel 3 or whichever Android System you'd prefer to run the app on.
+Click "No Device" or "Windows (windows-x64)" to pull up a list of android devices.
+In the top search bar across the top middle of the screen select "Pixel 3" or whichever Android System you'd prefer to run the app on.
 
 
 TO BEGIN GO TO THE TERMINAL AND RUN THE FOLLOWING COMMANDS:
@@ -21,7 +21,7 @@ When changing the "main.dart" file of the app,
 press lowercase r inside of the terminal to hot-reload the app (its an easy way to see all of the chnages you've made to the app itself).
 
 
-
+____________________________________________________________________________________________________________________________________
 
 ## Getting Started
 
