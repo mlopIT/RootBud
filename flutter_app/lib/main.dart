@@ -11,37 +11,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 0, 92, 18),
-          title: const Text('RootBud'),
-        ),
+        appBar: AppBar(backgroundColor: const Color.fromARGB(255, 0, 92, 18), title: const Text('RootBud')),
         body: Stack(
           children: [
             // First container (RootBud)
             Container(
-              color: const Color.fromARGB(255, 221, 66, 10),
-              height: 400,
+              color: const Color.fromRGBO(165, 73, 53, 1),
+              height: 550,
               width: 1000,
               child: const Align(
-                alignment:
-                    Alignment.topCenter, // Aligns content to the top center
+                alignment: Alignment.topCenter, // Aligns content to the top center
                 child: Padding(
-                  padding: EdgeInsets.only(
-                    top: 20,
-                  ), // Adjust top padding as needed
+                  padding: EdgeInsets.only(top: 20), // Adjust top padding as needed
                   child: Column(
                     mainAxisSize: MainAxisSize.min, // Keeps content compact
                     children: [
                       // RootBud Text
-                      Text(
-                        'RootBud',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'YourFontName',
-                          color: Colors.white,
-                        ),
-                      ),
+                      Text('RootBud', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'YourFontName', color: Colors.white)),
                       SizedBox(height: 10), // Space between texts
                     ],
                   ),
@@ -50,32 +36,28 @@ class MyApp extends StatelessWidget {
             ),
 
             //Image
-             Stack(
+            Stack(
               children: [
-              Positioned(
-                top: 100,
-                left: 150,
-                child: Image.asset(
-             'assets/images/Plant.png', // Make sure the image is added to the assets folder and referenced in pubspec.yaml
-              width: 100, // Adjust the width as needed
-              height: 100, // Adjust the height as needed
-                  )
-                )
-              ]
-             ),
-             
+                Positioned(
+                  top: 60,
+                  child: Image.asset(
+                    'assets/images/Plant.png', // Make sure the image is added to the assets folder and referenced in pubspec.yaml
+                    width: 380, // Adjust the width as needed
+                    height: 380, // Adjust the height as needed
+                  ),
+                ),
+              ],
+            ),
 
             // Second container (Made by)
             Positioned(
-              top: 300, // Controls the vertical position
+              top: 440, // Controls the vertical position
               left: 0,
               right: 0,
               child: Container(
                 padding: const EdgeInsets.all(10),
                 margin: const EdgeInsets.symmetric(horizontal: 30),
-                color: Colors.black.withOpacity(
-                  0.7,
-                ), // Semi-transparent background
+                color: const Color.fromARGB(255, 125, 30, 30).withOpacity(0.7), // Semi-transparent background
                 child: const Text(
                   'Made by Tyler Chadwick, Michael Lopez, Chris Sanchez, and Emdya Permuy-Llovio',
                   textAlign: TextAlign.center,
@@ -91,26 +73,20 @@ class MyApp extends StatelessWidget {
 
             // Fourth Child - Button below the container
             Positioned(
-              bottom: 50, // Positioned near the bottom of the screen
+              bottom: 60, // Positioned near the bottom of the screen
               left: 0,
               right: 0,
               child: Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    // Add functionality when button is pressed
+                    // Add functionality when button is rpressed
                     print('Button Pressed');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 1, 141, 24), // Button color
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 50,
-                      vertical: 15,
-                    ), // Button padding
+                    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15), // Button padding
                   ),
-                  child: const Text(
-                    'Create a RootBud',
-                    style: TextStyle(fontSize: 18, color: Colors.white),
-                  ),
+                  child: const Text('Create a RootBud', style: TextStyle(fontSize: 18, color: Colors.white)),
                 ),
               ),
             ),
