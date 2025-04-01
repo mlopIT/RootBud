@@ -4,9 +4,9 @@ A new Flutter project.
 
 Before you begin, ensure that you have atleast one android connected and powered on (running):
 
-Go to far bottom left corner of screen.
-Click "No Device" or "Windows (windows-x64)" to pull up a list of android devices.
-In the top search bar across the top middle of the screen select "Pixel 3" or whichever Android System you'd prefer to run the app on.
+Go to far bottom left corner of screen in VS Code.
+Click "No Device" or "Windows (windows-x64)" to open a list of available android devices.
+In the top search bar across the top portion of the screen, select "Pixel 3" or whichever Android system you'd prefer to run the Flutter app on.
 
 
 TO BEGIN GO TO THE TERMINAL AND RUN THE FOLLOWING COMMANDS:
@@ -15,10 +15,11 @@ cd flutter_app
 
 flutter run
 
-Now you wait, for the flutter to load...
+Now you wait, for the flutter app to load...
 
+Please note...
 When changing the "main.dart" file of the app, 
-press lowercase r inside of the terminal to hot-reload the app (its an easy way to see all of the chnages you've made to the app itself).
+press lowercase r inside of the VS Code terminal to "hot-reload" the Flutter app (its an easy way to see all of the changes you've made to the app).
 
 
 ____________________________________________________________________________________________________________________________________
